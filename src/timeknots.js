@@ -13,7 +13,8 @@ var TimeKnots = {
       labelFormat: "%Y/%m/%d %H:%M:%S",
       addNow: false,
       seriesColor: d3.scale.category20(),
-      dateDimension: true
+      dateDimension: true,
+      tooltipBackground: "rgba(0,0,0,0.5)"
     };
 
 
@@ -29,10 +30,10 @@ var TimeKnots = {
     var tip = d3.select(id)
     .append('div')
     .style("opacity", 0)
-    .style("position", "absolute")
+    .style("position", "fixed")
     .style("font-family", "Helvetica Neue")
     .style("font-weight", "300")
-    .style("background","rgba(0,0,0,0.5)")
+    .style("background",cfg.tooltipBackground)
     .style("color", "white")
     .style("padding", "5px 10px 5px 10px")
     .style("-moz-border-radius", "8px 8px")
